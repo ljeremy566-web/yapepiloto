@@ -1,0 +1,19 @@
+{
+  "name": "YapePiloto",
+  "short_name": "YapePiloto",
+  "description": "QR de Yape y nombre del chofer en pantalla limpia para colectivos.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "lang": "es-PE",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

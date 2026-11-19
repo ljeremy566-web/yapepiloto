@@ -1,0 +1,259 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.minimal-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--bg-page);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 20px;
+}
+
+.qr-stage {
+  width: min(360px, 62dvh, 78vw);
+  height: min(360px, 62dvh, 78vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-page);
+}
+
+.qr-stage-pair {
+  width: min(290px, 50dvh, 70vw);
+  height: min(290px, 50dvh, 70vw);
+}
+
+.qr-stage svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qr-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.pair-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.driver-name {
+  margin: 0;
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.subtle-caption {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  text-align: center;
+  max-width: 380px;
+  line-height: 1.4;
+}
+
+.subtle-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 4px;
+}
+
+.text-action-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  opacity: 0.65;
+  cursor: pointer;
+  transition: opacity 0.16s ease;
+}
+
+.text-action-btn:hover {
+  opacity: 1;
+}
+
+.subtle-edit-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--text-soft);
+  opacity: 0.25;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.subtle-edit-btn:hover,
+.subtle-edit-btn:focus-visible {
+  opacity: 0.9;
+  background: var(--surface-soft);
+  outline: none;
+}
+
+/* Mobile phone sender view */
+.edit-sheet {
+  width: min(390px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.edit-heading {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.edit-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 14px;
+  background: var(--surface-soft);
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.edit-input:focus {
+  background: #eceef2;
+}
+
+.edit-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: var(--surface-soft);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-upload-btn:hover {
+  background: #eceef2;
+}
+
+.phone-qr-preview {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.phone-qr-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.edit-status {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin: 0;
+  text-align: center;
+}
+
+.btn-save {
+  width: 100%;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--text-main);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-cancel {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 14px;
+  background: var(--surface-soft);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.phone-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.done-check {
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text-main);
+  display: grid;
+  place-items: center;
+}
